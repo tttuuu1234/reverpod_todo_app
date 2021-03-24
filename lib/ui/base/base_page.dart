@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:reverpod_todo_app/app.dart';
-import 'package:reverpod_todo_app/ui/todo/create/todo_create_page.dart';
-import 'package:reverpod_todo_app/ui/todo/list/todo_list_page.dart';
+import 'package:reverpod_todo_app/ui/todo/todo_create_page.dart';
+import 'package:reverpod_todo_app/ui/todo/todo_list_page.dart';
 
 class BasePage extends HookWidget {
   BasePage({Key key}) : super(key: key);

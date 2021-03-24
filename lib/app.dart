@@ -2,16 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:reverpod_todo_app/ui/base/base_page.dart';
 import 'package:reverpod_todo_app/ui/base/base_view_model.dart';
+import 'package:reverpod_todo_app/ui/todo/todo_view_model.dart';
 
 final baseProvider = StateNotifierProvider((_) => BaseViewModel());
+final todoProvider = StateNotifierProvider((_) => TodoViewModel());
+
 class App extends StatelessWidget {
   const App({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(primaryColor: Colors.blue),
-        home: BasePage());
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primaryColor: Colors.blue),
+      home: BasePage(),
+    );
   }
 }
