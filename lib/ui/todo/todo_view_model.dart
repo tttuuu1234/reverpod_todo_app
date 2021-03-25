@@ -7,9 +7,15 @@ class TodoViewModel extends StateNotifier<TodoList> {
 
   void addTodo({String content}) {
     final id = state.todoList.length + 1;
-    final newList = [...state.todoList, Todo(id: id, content: content)];
-    state = state.copyWith(todoList: newList);
 
-    print(state.todoList);
+    /// todoを既存のtodoListに追加
+    final newList = [
+      ...state.todoList,
+      Todo(
+        id: id,
+        content: content,
+      )
+    ];
+    state = state.copyWith(todoList: newList);
   }
 }

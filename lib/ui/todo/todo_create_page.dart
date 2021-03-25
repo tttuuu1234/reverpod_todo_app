@@ -29,7 +29,6 @@ class TodoCreatePage extends HookWidget {
                   ),
                   onChanged: (String value) {
                     _content = value;
-                    print(_content);
                   },
                 ),
                 const Padding(
