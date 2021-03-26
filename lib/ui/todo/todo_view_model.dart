@@ -5,7 +5,9 @@ import 'package:reverpod_todo_app/state/todoList/todo_list.dart';
 class TodoViewModel extends StateNotifier<TodoList> {
   TodoViewModel() : super(TodoList());
 
-  void addTodo({String content}) {
+  void addTodo({
+    String content,
+  }) {
     final id = state.todoList.length + 1;
 
     /// todoを既存のtodoListに追加
@@ -17,5 +19,12 @@ class TodoViewModel extends StateNotifier<TodoList> {
       )
     ];
     state = state.copyWith(todoList: newList);
+  }
+
+  void deleteTodo({
+    int id,
+  }) {
+    /// idに一致したtodoを削除
+    state.todoList.removeWhere((todo) => todo.id == id);
   }
 }
